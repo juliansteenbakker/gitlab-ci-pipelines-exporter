@@ -3,7 +3,7 @@ log:
   level: debug
 
 gitlab:
-  url: https://gitlab.com
+  url: http://nix:81/
   token: <your_token>
 
 # Pull jobs related metrics on all projects
@@ -13,13 +13,5 @@ project_defaults:
       jobs:
         enabled: true
 
-# Example public projects to monitor
-projects:
-  - name: gitlab-org/gitlab-runner
-    # Pull environments related metrics prefixed with 'stable' for this project
-    pull:
-      environments:
-        enabled: true
-        name_regexp: '^stable.*'
-
-  - name: gitlab-org/charts/auto-deploy-app
+wildcards:
+  - {}
